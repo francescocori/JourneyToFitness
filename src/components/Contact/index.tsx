@@ -29,16 +29,12 @@ export default function Contact() {
                     />
                   </svg>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-base-content mb-1">
-                    Email
-                  </h3>
-
+                <div className="flex items-center justify-center">
                   <a
                     href="mailto:email@example.com"
-                    className="text-base-content underline hover:text-primary transition-colors duration-200"
+                    className="text-base-content  hover:text-primary transition-colors duration-200 mt-2"
                   >
-                    email@example.com
+                    CarloLoPompa@gmail.com
                   </a>
                 </div>
               </div>
@@ -60,14 +56,10 @@ export default function Contact() {
                     />
                   </svg>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-base-content mb-1">
-                    Phone
-                  </h3>
-
+                <div className="flex items-center justify-center">
                   <a
                     href="tel:+15550000000"
-                    className="text-base-content underline hover:text-primary transition-colors duration-200"
+                    className="text-base-content  hover:text-primary transition-colors duration-200 mt-2"
                   >
                     +1 (555) 000-0000
                   </a>
@@ -98,29 +90,9 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-base-content mb-1">Gym</h3>
-                  <p className="text-base-content/70 mb-1">
-                    123 Sample St, Sydney NSW 2000 AU
+                  <p className="text-base-content/70  mt-2">
+                    123 Dinosaur Street, London NSW 2000 AU
                   </p>
-                  <a
-                    href="#"
-                    className="text-base-content underline hover:text-primary transition-colors duration-200 flex items-center gap-1"
-                  >
-                    Get Directions
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>
