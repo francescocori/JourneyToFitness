@@ -43,7 +43,7 @@ export default function About() {
             <div className="pt-4 text-center lg:text-left">
               <button className="btn btn-primary rounded-full px-6 py-3 text-base font-medium">
                 <a
-                  href="https://wa.me/447778628831?text=Lo%20I%20pompi?"
+                  href="https://wa.me/447778628831?text=Lo%20pompi?"
                   target="_blank"
                   rel="noopener noreferrer"
                   //className="font-founders mt-4 btn  border-brand-goldDark font-medium shadow-none"
