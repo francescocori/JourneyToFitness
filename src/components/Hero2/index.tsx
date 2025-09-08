@@ -91,7 +91,7 @@ export default function Hero() {
 
       {/* Text content with highest z-index */}
       <div className="text-center px-6 max-w-7xl mx-auto relative z-20">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[120px] font-black leading-[0.8] tracking-tight mb-8 md:mb-12 drop-shadow-2xl text-base-content min-h-[120px] md:min-h-[200px]">
+        <h1 className="text-[60px] sm:text-[80px] md:text-[120px] lg:text-[140px] xl:text-[180px] font-black leading-[0.8] tracking-tight mb-8 md:mb-12 drop-shadow-2xl text-base-content min-h-[120px] md:min-h-[200px]">
           {displayedHeroText}
           {!heroComplete && showHeroCursor && (
             <span className="text-primary animate-pulse">|</span>

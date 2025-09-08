@@ -8,6 +8,7 @@ interface Slide {
   title: string;
   subtitle?: string;
   description: string;
+  description2: string;
   image: string;
 }
 
@@ -18,6 +19,8 @@ const slides: Slide[] = [
     subtitle: "BUILD POWER",
     description:
       "Transform your body with our comprehensive strength training programs designed to build lean muscle and increase your power.Transform your body with our comprehensive strength training programs designed to build lean muscle and increase your power.",
+    description2:
+      "Transform your body with our comprehensive strength training programs designed to build lean muscle and increase your power.Transform your body with our comprehensive strength training programs designed to build lean muscle and increase your power.",
     image:
       "https://images.unsplash.com/photo-1534258936925-c58bed479fcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80",
   },
@@ -26,6 +29,8 @@ const slides: Slide[] = [
     title: "Online Lessons",
     subtitle: "PUSH LIMITS",
     description:
+      "Push your cardiovascular limits with high-intensity training that builds stamina and mental toughness.Push your cardiovascular limits with high-intensity training that builds stamina and mental toughness.",
+    description2:
       "Push your cardiovascular limits with high-intensity training that builds stamina and mental toughness.Push your cardiovascular limits with high-intensity training that builds stamina and mental toughness.",
     image:
       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80",
@@ -36,6 +41,8 @@ const slides: Slide[] = [
     subtitle: "FIND HARMONY",
     description:
       "Develop core stability and body awareness through functional movements and mindful training techniques.Develop core stability and body awareness through functional movements and mindful training techniques.",
+    description2:
+      "Develop core stability and body awareness through functional movements and mindful training techniques.Develop core stability and body awareness through functional movements and mindful training techniques.",
     image:
       "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2320&q=80",
   },
@@ -44,6 +51,8 @@ const slides: Slide[] = [
     title: "Nutritional Plans",
     subtitle: "MASTER TRAINER",
     description:
+      "Meet our lead trainer who will guide your fitness journey with personalized programs and expert guidance.Meet our lead trainer who will guide your fitness journey with personalized programs and expert guidance.",
+    description2:
       "Meet our lead trainer who will guide your fitness journey with personalized programs and expert guidance.Meet our lead trainer who will guide your fitness journey with personalized programs and expert guidance.",
     image:
       "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80",
@@ -110,7 +119,7 @@ export default function SplitScreen() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
-                    className="text-4xl lg:text-6xl leading-tight text-primary mb-4"
+                    className="text-4xl lg:text-5xl leading-tight text-primary mb-4"
                   >
                     {slides[currentSlide].title}
                   </motion.h2>
@@ -123,6 +132,9 @@ export default function SplitScreen() {
                     className="text-lg text-base-content/70 max-w-lg  lg:text-left mx-auto lg:mx-0 leading-relaxed"
                   >
                     {slides[currentSlide].description}
+                    <div className="mt-4">
+                      {slides[currentSlide].description2}
+                    </div>
                   </motion.p>
 
                   <motion.div

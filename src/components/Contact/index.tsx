@@ -6,7 +6,7 @@ export default function Contact() {
           {/* Left Column - Contact Information */}
           <div className="lg:w-2/5 space-y-8">
             {/* Main Heading */}
-            <h2 className="text-4xl lg:text-6xl leading-tight text-primary">
+            <h2 className="text-4xl lg:text-5xl leading-tight text-primary">
               Contact us
             </h2>
 

@@ -87,7 +87,7 @@ export default function Faq() {
         >
           {/* Left Column - Heading and Description */}
           <div className="lg:w-2/5">
-            <h2 className="text-4xl lg:text-6xl leading-tight text-primary mb-6">
+            <h2 className="text-4xl lg:text-5xl leading-tight text-primary mb-6">
               Frequently
               <br />
               Asked
