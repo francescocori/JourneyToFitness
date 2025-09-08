@@ -4,7 +4,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-base flex items-center px-4 lg:pl-10">
+    <div className="min-h-screen bg-base flex items-center px-4 lg:pl-10 pb-4">
       <div className="w-full max-w-7xl mx-auto px-4 lg:px-12">
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-10 items-center">
           <div className="relative col-span-1 lg:col-span-3">
