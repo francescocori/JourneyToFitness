@@ -132,9 +132,9 @@ export default function SplitScreen() {
                     className="text-lg text-base-content/70 max-w-lg  lg:text-left mx-auto lg:mx-0 leading-relaxed"
                   >
                     {slides[currentSlide].description}
-                    <div className="mt-4">
+                    <span className="mt-4 block">
                       {slides[currentSlide].description2}
-                    </div>
+                    </span>
                   </motion.p>
 
                   <motion.div
