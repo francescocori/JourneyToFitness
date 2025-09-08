@@ -1,26 +1,39 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  background-color: #f1fff9;
+}
+
+/* Ensure DaisyUI buttons maintain their styling */
+.btn {
+  background-color: var(--btn-bg) !important;
+  color: var(--btn-fg) !important;
+  border-color: var(--btn-border) !important;
+  box-shadow: var(--btn-shadow) !important;
+}
+
+.btn-primary {
+  --btn-color: #5a873a !important;
+  --btn-bg: #5a873a !important;
+  --btn-fg: white !important;
+  --btn-border: #5a873a !important;
+}
+
+.bg-shopify-hero {
+  background-color: #f1fff9;
+  background-image: linear-gradient(#f1fff900 70%, #f1fff9),
+    radial-gradient(circle at 0 0, #5fd5b6 0, #5fd5b600 30%),
+    linear-gradient(#79dfffb3 -10%, #79dfff00 70%),
+    radial-gradient(circle at 95% 0, #d0f224 0, #5fd5b600 20%);
 }
