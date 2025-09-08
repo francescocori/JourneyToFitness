@@ -6,8 +6,8 @@ export default function About() {
   return (
     <div className="min-h-screen bg-base flex items-center px-4 lg:pl-10">
       <div className="w-full max-w-7xl mx-auto px-4 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
-          <div className="relative">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-10 items-center">
+          <div className="relative col-span-1 lg:col-span-3">
             <div className="relative overflow-hidden ">
               <img
                 src="/Images/carlo.png"
@@ -25,7 +25,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="text-base-content space-y-6">
+          <div className="text-base-content space-y-6 col-span-1 lg:col-span-2">
             <h2 className="text-4xl lg:text-6xl leading-tight text-center lg:text-left">
               Meet Carlo
             </h2>
@@ -42,7 +42,14 @@ export default function About() {
 
             <div className="pt-4 text-center lg:text-left">
               <button className="btn btn-primary rounded-full px-6 py-3 text-base font-medium">
-                BOOK A FREE CALL
+                <a
+                  href="https://wa.me/447778628831?text=Lo%20I%20pompi?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  //className="font-founders mt-4 btn  border-brand-goldDark font-medium shadow-none"
+                >
+                  BOOK A FREE CALL
+                </a>
               </button>
             </div>
           </div>

@@ -106,7 +106,13 @@ export default function Hero3() {
 
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
               <button className="btn btn-primary rounded-full px-6 py-3 text-base font-medium">
-                BOOK A FREE CALL
+                <a
+                  href="https://wa.me/447778628831?text=Lo%20I%20pompi?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  BOOK A FREE CALL
+                </a>
               </button>
             </div>
 

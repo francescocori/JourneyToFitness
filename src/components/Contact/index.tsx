@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="py-20 bg-base-100">
+    <section className="py-20 bg-base">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
           {/* Left Column - Contact Information */}

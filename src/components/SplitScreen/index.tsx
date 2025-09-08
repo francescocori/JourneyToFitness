@@ -88,77 +88,81 @@ export default function SplitScreen() {
   return (
     <div
       ref={containerRef}
-      className="relative bg-base-300"
+      className="relative bg-base"
       style={{ height: `${slides.length * 100}vh` }}
     >
       {/* Fixed viewport that shows current slide */}
-      <div className="sticky top-0 h-screen w-full grid grid-cols-1 lg:grid-cols-5 gap-0 overflow-hidden">
-        {/* Text Content - Full width on mobile, Columns 1-2 on desktop */}
-        <div className="col-span-1 lg:col-span-2 bg-base-100 flex items-start justify-start p-4 sm:p-6 lg:p-12 relative z-10 lg:r-[10rem]">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentSlide}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="text-base-content max-w-lg text-left mt-[3rem] mr-[3rem]"
-            >
-              <motion.h2
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-4xl lg:text-6xl leading-tight text-primary mb-4"
-              >
-                {slides[currentSlide].title}
-              </motion.h2>
+      <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto items-start h-full">
+            {/* Text Content - 2/5 width on desktop */}
+            <div className="lg:w-2/5 bg-base flex items-start justify-start    relative z-10">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSlide}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 50 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  className="text-base-content max-w-lg text-left mt-[3rem] mr-[3rem]"
+                >
+                  <motion.h2
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.6 }}
+                    className="text-4xl lg:text-6xl leading-tight text-primary mb-4"
+                  >
+                    {slides[currentSlide].title}
+                  </motion.h2>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                //className="text-sm sm:text-base lg:text-lg text-base-content/70 leading-relaxed"
-                className="text-lg text-base-content/70 max-w-lg  lg:text-left mx-auto lg:mx-0 leading-relaxed"
-              >
-                {slides[currentSlide].description}
-              </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6, duration: 0.6 }}
+                    //className="text-sm sm:text-base lg:text-lg text-base-content/70 leading-relaxed"
+                    className="text-lg text-base-content/70 max-w-lg  lg:text-left mx-auto lg:mx-0 leading-relaxed"
+                  >
+                    {slides[currentSlide].description}
+                  </motion.p>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                className="mt-4 lg:mt-8"
-              ></motion.div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8, duration: 0.6 }}
+                    className="mt-4 lg:mt-8"
+                  ></motion.div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
 
-        {/* Image Content - Full width on mobile, Columns 3-5 on desktop */}
-        <div className="col-span-1 lg:col-span-3 relative overflow-hidden bg-base-100 flex items-end">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentSlide}
-              initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="w-full h-[120%] lg:h-[70%]"
-            >
-              <div className="flex items-center justify-center h-full">
-                <motion.img
-                  src={slides[currentSlide].image}
-                  alt={slides[currentSlide].title}
-                  className="w-full h-full object-cover"
-                  initial={{ scale: 1.1 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 8, ease: "linear" }}
-                  style={{
-                    filter: "brightness(0.8) contrast(1.1)",
-                  }}
-                />
-              </div>
-            </motion.div>
-          </AnimatePresence>
+            {/* Image Content - 3/5 width on desktop */}
+            <div className="lg:w-3/5 absolute overflow-hidden bg-base flex justify-end bottom-0 right-[5%] 2xl:right-[3%]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSlide}
+                  initial={{ opacity: 0, scale: 1.1 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="w-[90%] h-[120%] lg:h-[70%]"
+                >
+                  <div className="flex items-center justify-center h-full ml-8 xl:ml-19.5">
+                    <motion.img
+                      src={slides[currentSlide].image}
+                      alt={slides[currentSlide].title}
+                      className="w-full h-full object-cover"
+                      initial={{ scale: 1.1 }}
+                      animate={{ scale: 1 }}
+                      transition={{ duration: 8, ease: "linear" }}
+                      style={{
+                        filter: "brightness(0.8) contrast(1.1)",
+                      }}
+                    />
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
         </div>
 
         {/* Slide Progress Indicator */}

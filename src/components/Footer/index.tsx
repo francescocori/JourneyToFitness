@@ -11,23 +11,23 @@ export default function Footer() {
             className="inline-block"
           >
             <Image
-              src="/Images/instagram.png"
+              src="/Images/instagramWhite.png"
               alt="Instagram"
               width={40}
               height={40}
-              className="rounded-lg"
+              className="rounded-lg fill-current text-white"
             />
           </a>
         </div>
         <div className="">
-          <p className="font-semibold text-base-content text-lg leading-tight">
+          <p className=" text-base-content text-lg leading-tight text-white">
             Journey to Fitness & Co.
           </p>
-          <p className="font-semibold text-base-content text-lg leading-tight">
+          <p className=" text-base-content text-lg leading-tight text-white">
             Making people fit since 2010
           </p>
         </div>
-        <p className="text-sm">
+        <p className="text-sm text-white">
           Copyright © {new Date().getFullYear()} - All right reserved
         </p>
       </div>
