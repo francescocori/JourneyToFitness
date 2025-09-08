@@ -11,8 +11,10 @@ interface FeatureIconProps {
 
 const FeatureIcon = ({ icon }: FeatureIconProps) => {
   return (
-    <div className="w-40 h-40 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center p-4">
-      <div className="text-6xl text-primary">{icon}</div>
+    <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 mx-auto mb-4 sm:mb-6 rounded-full bg-primary/10 flex items-center justify-center p-2 sm:p-4">
+      <div className="text-3xl sm:text-4xl lg:text-6xl text-primary">
+        {icon}
+      </div>
     </div>
   );
 };
@@ -22,12 +24,12 @@ interface FeatureCardProps {
 }
 
 const FeatureCard = ({ feature }: FeatureCardProps) => (
-  <div className="text-center">
+  <div className="text-center px-2 sm:px-4">
     <FeatureIcon icon={feature.icon} />
-    <h3 className="text-xl font-bold mb-4 text-base-content">
+    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-base-content">
       {feature.title}
     </h3>
-    <p className="text-base-content/70 leading-relaxed">
+    <p className="text-sm sm:text-base text-base-content/70 leading-relaxed">
       {feature.description}
     </p>
   </div>
@@ -59,18 +61,13 @@ const featuresData: Feature[] = [
 
 export default function Features() {
   return (
-    <section className="py-20 bg-base bg-primary/10 h-[100vh] flex flex-col ">
-      <h2 className="text-4xl lg:text-5xl leading-tight text-center text-primary">
-        Choose Your Training Style
-      </h2>
-      <div className="container m-auto  px-4  flex items-center justify-center">
-        <div className="text-center mb-16">
-          {/* <h2 className="text-4xl lg:text-5xl leading-tight text-center text-primary">
-            Choose Your Training Style
-          </h2> */}
-        </div>
+    <section className="py-8 sm:py-12 lg:py-20 bg-base bg-primary/10 min-h-screen flex flex-col">
+      <div className="container mx-auto px-4 flex flex-col items-center justify-center flex-1">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-tight text-center text-primary mb-8 sm:mb-12 lg:mb-16">
+          Choose Your Training Style
+        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 max-w-6xl mx-auto w-full">
           {featuresData.map((feature) => (
             <FeatureCard key={feature.id} feature={feature} />
           ))}
