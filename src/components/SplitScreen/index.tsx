@@ -144,9 +144,9 @@ export default function SplitScreen() {
                     <span className="mt-4 block">
                       {slides[currentSlide].description2}
                     </span>
-                    <span className="mt-4 block">
+                    {/* <span className="mt-4 block">
                       {slides[currentSlide].description3}
-                    </span>
+                    </span> */}
                   </motion.p>
 
                   <motion.div
