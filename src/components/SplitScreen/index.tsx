@@ -136,7 +136,7 @@ export default function SplitScreen() {
             </div>
 
             {/* Image Content - 3/5 width on desktop */}
-            <div className="lg:w-3/5 absolute overflow-hidden bg-base flex justify-end bottom-0 right-[5%] 2xl:right-[3%]">
+            <div className="w-full lg:w-3/5 h-[50vh] lg:h-auto absolute overflow-hidden bg-base flex lg:justify-end bottom-0 lg:right-[5%] 2xl:right-[3%]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentSlide}
@@ -144,7 +144,7 @@ export default function SplitScreen() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="w-[90%] h-[120%] lg:h-[70%]"
+                  className="w-full lg:w-[90%] h-[160%] lg:h-[70%]"
                 >
                   <div className="flex items-center justify-center h-full ml-8 xl:ml-19.5">
                     <motion.img
