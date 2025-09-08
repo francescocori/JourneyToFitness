@@ -108,7 +108,7 @@ export default function SplitScreen() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl leading-tight mb-2 lg:mb-4 text-primary "
+                className="text-4xl lg:text-6xl leading-tight text-primary mb-4"
               >
                 {slides[currentSlide].title}
               </motion.h2>

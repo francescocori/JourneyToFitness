@@ -13,7 +13,7 @@ export default function About() {
                 src="/Images/carlo.png"
                 //src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
                 alt="carlo"
-                className="w-full h-[300px] sm:h-[400px] lg:h-[600px] xl:h-[700px] object-cover"
+                className="w-full h-[350px] sm:h-[450px] lg:h-[600px] xl:h-[700px] object-cover "
               />
 
               {/* Subtle overlay for consistency */}
