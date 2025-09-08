@@ -59,12 +59,15 @@ const featuresData: Feature[] = [
 
 export default function Features() {
   return (
-    <section className="py-20 bg-base bg-primary/10">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-base bg-primary/10 h-[100vh] flex flex-col ">
+      <h2 className="text-4xl lg:text-5xl leading-tight text-center text-primary">
+        Choose Your Training Style
+      </h2>
+      <div className="container m-auto  px-4  flex items-center justify-center">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl leading-tight text-center text-primary ">
+          {/* <h2 className="text-4xl lg:text-5xl leading-tight text-center text-primary">
             Choose Your Training Style
-          </h2>
+          </h2> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
