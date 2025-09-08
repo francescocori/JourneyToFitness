@@ -117,7 +117,8 @@ export default function SplitScreen() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
-                className="text-sm sm:text-base lg:text-lg text-base-content/70 leading-relaxed"
+                //className="text-sm sm:text-base lg:text-lg text-base-content/70 leading-relaxed"
+                className="text-lg text-base-content/70 max-w-lg  lg:text-left mx-auto lg:mx-0 leading-relaxed"
               >
                 {slides[currentSlide].description}
               </motion.p>
