@@ -100,7 +100,7 @@ export default function Contact() {
 
           {/* Right Column - Google Map */}
           <div className="lg:w-3/5">
-            <div className="rounded-lg h-96 lg:h-[500px] overflow-hidden">
+            <div className=" h-96 lg:h-[500px] overflow-hidden rounded-2xl">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.0!2d-0.1280!3d51.5120!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b4d4b4d4b4%3A0x487604b4d4b4d4b4!2s32%20Endell%20St%2C%20London%20WC2H%209AG%2C%20UK!5e0!3m2!1sen!2suk!4v1234567890"
                 width="100%"

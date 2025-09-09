@@ -24,8 +24,7 @@ const slides: Slide[] = [
       "Transform your body with our comprehensive strength training programs designed to build lean muscle and increase your power.",
     description3:
       "training programs designed to build lean muscle and increase your power.",
-    image:
-      "https://images.unsplash.com/photo-1534258936925-c58bed479fcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80",
+    image: "/Images/training.jpg",
   },
   {
     id: 2,
@@ -37,12 +36,11 @@ const slides: Slide[] = [
       "Push your cardiovascular limits with high-intensity training that builds stamina and mental toughness.Push your cardiovascular",
     description3:
       "Push your cardiovascular limits with high-intensity training that.",
-    image:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80",
+    image: "/Images/online2.webp",
   },
   {
     id: 3,
-    title: "Group Bootcamp",
+    title: "Saturday Bootcamp",
     subtitle: "FIND HARMONY",
     description:
       "Develop core stability and body awareness through functional movements and mindful training techniques.Develop core stability.",
@@ -50,8 +48,7 @@ const slides: Slide[] = [
       "Develop core stability and body awareness through functional movements and mindful training techniques.Develop core stabilit",
     description3:
       "Develop core stability and body awareness through functional movements and mindful training techniques.Develop core stabilit.",
-    image:
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2320&q=80",
+    image: "/Images/bootcamp.jpg",
   },
   {
     id: 4,
@@ -63,8 +60,7 @@ const slides: Slide[] = [
       "Meet our lead trainer who will guide your fitness journey with personalized programs and expert guidance.Meet our lead trainer.",
     description3:
       "Meet our lead trainer who will guide your fitness journey with personalized programs and expert guidance.Meet our lead trainer.",
-    image:
-      "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80",
+    image: "/Images/diet.jpg",
   },
 ];
 
@@ -114,7 +110,7 @@ export default function SplitScreen() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto items-start h-full">
             {/* Text Content - 2/5 width on desktop */}
-            <div className="lg:w-2/5 bg-base flex items-start justify-start    relative z-10">
+            <div className="lg:w-2/5 bg-base flex items-start justify-start mt-10   relative z-10">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentSlide}

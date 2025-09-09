@@ -4,16 +4,12 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-base flex items-center px-4 lg:pl-10 pb-4">
+    <div className="min-h-[70vh] bg-base flex items-center px-4 lg:pl-10 mb-16">
       <div className="w-full max-w-7xl mx-auto px-4 lg:px-12">
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-10 items-center">
           <div className="relative col-span-1 lg:col-span-3">
             <div className="relative overflow-hidden ">
-              <img
-                src="/Images/carlo.png"
-                alt="carlo"
-                className="w-full h-[350px] sm:h-[450px] lg:h-[600px] xl:h-[700px] object-cover "
-              />
+              <img src="/Images/carlo3.png" alt="carlo" className="mx-auto " />
 
               {/* Subtle overlay for consistency */}
               <div className="absolute inset-0 bg-base-300/10" />
