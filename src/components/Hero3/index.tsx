@@ -7,12 +7,13 @@ export default function Hero3() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const textParts = [
-    { text: "Welcome to your", color: "text-base-content" },
-    { text: "Journey to Fitness", color: "text-base-content" },
-    // { text: " designed for your lifestyle.", color: "text-base-content" },
-    // { text: "Let's go!", color: "text-primary" },
+    // { text: "Welcome to your", color: "text-base-content" },
+    // { text: "Journey to Fitness", color: "text-base-content" },
+    { text: "Flexible workouts", color: "text-base-content" },
+    { text: "tailored to your routine", color: "text-base-content" },
+    // { text: "", color: "text-base-content" },
   ];
-
+  // Flexible workouts and nutrition tailored to your routine
   const fullText = textParts.map((part) => part.text).join("");
 
   // Function to render typed text with colors
@@ -119,8 +120,10 @@ export default function Hero3() {
             </h1>
 
             <p className="text-lg text-base-content/70 max-w-xl mx-auto leading-relaxed">
-              Flexible workouts and nutrition guidance that fit seamlessly into
-              your daily routine.
+              {/* Flexible workouts and nutrition guidance that fit seamlessly into
+              your daily routine. */}
+              Welcome to your
+              <span className="font-semibold"> Journey to Fitness </span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
@@ -166,13 +169,16 @@ export default function Hero3() {
         className="min-h-screen relative overflow-hidden"
         style={{ perspective: "1000px" }}
       >
-        <div
-          ref={imageRef}
-          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-300 ease-out"
-          style={{
-            backgroundImage: `url('/Images/gymBg1.png')`,
-          }}
-        />
+        <div className="absolute inset-0 flex items-center justify-center mx-[20px]">
+          <Image
+            ref={imageRef as React.RefObject<HTMLImageElement>}
+            src="/Images/gymBg1.png"
+            alt="Gym interior"
+            width={800}
+            height={600}
+            className="w-full h-[80%] object-cover transition-all duration-300 ease-out rounded-2xl"
+          />
+        </div>
       </div>
     </div>
   );

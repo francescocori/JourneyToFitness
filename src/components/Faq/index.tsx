@@ -79,7 +79,7 @@ export default function Faq() {
   }, []);
 
   return (
-    <section className="py-20 bg-base">
+    <section className="py-20 mt-10 bg-primary/10 mx-[20px] rounded-2xl">
       <div className="container mx-auto px-4">
         <div
           ref={faqRef}
