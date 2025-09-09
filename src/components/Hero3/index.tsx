@@ -110,7 +110,7 @@ export default function Hero3() {
       </a>
 
       {/* Hero Section */}
-      <div className="hero h-[70vh] flex items-center justify-center relative z-10">
+      <div className="hero h-[70vh] flex items-center justify-center relative z-10 container mx-auto px-4">
         <div className="hero-content text-center max-w-3xl">
           <div className="space-y-6">
             <h1 className="text-4xl lg:text-6xl  leading-tight">
