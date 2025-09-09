@@ -105,7 +105,7 @@ export default function Hero3() {
             alt="WhatsApp"
             width={50}
             height={50}
-            className="w-10 h-10"
+            className="w-[52px] h-[52px]"
           />
         </div>
       </a>
