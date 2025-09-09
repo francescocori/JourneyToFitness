@@ -155,8 +155,8 @@ export default function SplitScreen() {
               </AnimatePresence>
             </div>
 
-            {/* Image Content - 3/5 width on desktop */}
-            <div className="w-full lg:w-3/5 h-[50vh]  lg:h-auto absolute overflow-hidden bg-base flex lg:justify-end bottom-0 lg:right-[5%] 2xl:right-[3%]">
+            {/* Mobile Image - Full width with proper spacing */}
+            <div className="lg:hidden w-full h-[40vh] absolute bottom-0 left-0 right-0 px-4 pb-4">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentSlide}
@@ -164,7 +164,33 @@ export default function SplitScreen() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="w-full lg:w-[90%] h-[160%] lg:h-[70%] rounded-2xl"
+                  className="w-full h-full rounded-2xl overflow-hidden"
+                >
+                  <motion.img
+                    src={slides[currentSlide].image}
+                    alt={slides[currentSlide].title}
+                    className="w-full h-full object-cover"
+                    initial={{ scale: 1.1 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 8, ease: "linear" }}
+                    style={{
+                      filter: "brightness(0.8) contrast(1.1)",
+                    }}
+                  />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Desktop Image Content - 3/5 width on desktop */}
+            <div className="hidden lg:block lg:w-3/5 h-auto absolute overflow-hidden bg-base flex lg:justify-end bottom-0 lg:right-[5%] 2xl:right-[3%]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSlide}
+                  initial={{ opacity: 0, scale: 1.1 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="w-[90%] h-[70%] rounded-2xl ml-[10%]"
                 >
                   <div className="flex items-center justify-center h-full ml-8 xl:ml-19.5 rounded-2xl overflow-hidden">
                     <motion.img
