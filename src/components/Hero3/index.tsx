@@ -166,7 +166,7 @@ export default function Hero3() {
 
       {/* Large Device Mockups Section */}
       <div
-        className="min-h-screen relative overflow-hidden"
+        className="lg:h-[70vh] h-[50vh] relative overflow-hidden"
         style={{ perspective: "1000px" }}
       >
         <div className="absolute inset-0 flex items-center justify-center mx-[20px]">
