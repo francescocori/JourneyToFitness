@@ -37,21 +37,21 @@ const FeatureCard = ({ feature }: FeatureCardProps) => (
 
 const featuresData: Feature[] = [
   {
-    id: "personal-training",
+    id: "1",
     title: "Free Consultation",
     description:
       "Get personalized attention with one-on-one training sessions tailored to your specific fitness goals and needs.",
     icon: "💬",
   },
   {
-    id: "online-training",
+    id: "2",
     title: "We make the plan",
     description:
       "Train from anywhere with our online personal training sessions. Get the same quality guidance through video calls.",
     icon: "📝",
   },
   {
-    id: "bootcamp",
+    id: "3",
     title: "Let's workout",
     description:
       "Join our high-energy group bootcamp sessions for motivation, camaraderie, and intense full-body workouts.",
@@ -62,11 +62,13 @@ const featuresData: Feature[] = [
 export default function Features() {
   return (
     <section className="py-8 sm:py-12 lg:py-20 bg-base bg-primary/10 min-h-screen flex flex-col">
-      <div className="container mx-auto px-4 flex flex-col items-center justify-center flex-1">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-tight text-center text-primary mb-8 sm:mb-12 lg:mb-16">
-          Choose Your Training Style
+      <div className="container mx-auto px-4 flex flex-col items-center">
+        <h2 className="text-4xl lg:text-5xl leading-tight text-center lg:text-left text-primary mb-8 sm:mb-12 lg:mb-16">
+          Never been easier
         </h2>
+      </div>
 
+      <div className="container mx-auto px-4 flex flex-col items-center justify-center flex-1">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 max-w-6xl mx-auto w-full">
           {featuresData.map((feature) => (
             <FeatureCard key={feature.id} feature={feature} />

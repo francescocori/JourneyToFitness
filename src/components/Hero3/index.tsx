@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function Hero3() {
@@ -90,6 +91,24 @@ export default function Hero3() {
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-shopify-hero">
+      {/* Fixed WhatsApp Button - Mobile Only */}
+      <a
+        href="https://wa.me/447778628831?text=Lo%20pompi?"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed top-4 right-4 z-50 flex items-center gap-3  md:hidden"
+      >
+        <div className="rounded-full flex items-center justify-center">
+          <Image
+            src="/Images/whatsapp.png"
+            alt="WhatsApp"
+            width={50}
+            height={50}
+            className="w-10 h-10"
+          />
+        </div>
+      </a>
+
       {/* Hero Section */}
       <div className="hero h-[70vh] flex items-center justify-center relative z-10">
         <div className="hero-content text-center max-w-3xl">
@@ -105,7 +124,7 @@ export default function Hero3() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <button className="btn btn-primary rounded-full px-6 py-3 text-base font-medium">
+              <button className="btn btn-primary rounded-full px-6 py-3 text-base font-medium w-full sm:w-auto">
                 <a
                   href="https://wa.me/447778628831?text=Lo%20pompi?"
                   target="_blank"

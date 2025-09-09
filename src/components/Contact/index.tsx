@@ -16,7 +16,7 @@ export default function Contact() {
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
                   <svg
-                    className="w-6 h-6 text-base-content"
+                    className="w-6 h-6 text-primary"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -29,10 +29,10 @@ export default function Contact() {
                     />
                   </svg>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center mt-3">
                   <a
                     href="mailto:email@example.com"
-                    className="text-base-content  hover:text-primary transition-colors duration-200 mt-2"
+                    className="text-base-content  hover:text-primary transition-colors duration-200"
                   >
                     CarloLoPompa@gmail.com
                   </a>
@@ -43,7 +43,7 @@ export default function Contact() {
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
                   <svg
-                    className="w-6 h-6 text-base-content"
+                    className="w-6 h-6 text-primary"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -56,10 +56,10 @@ export default function Contact() {
                     />
                   </svg>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center mt-3">
                   <a
                     href="tel:+15550000000"
-                    className="text-base-content  hover:text-primary transition-colors duration-200 mt-2"
+                    className="text-base-content  hover:text-primary transition-colors duration-200 "
                   >
                     +1 (555) 000-0000
                   </a>
@@ -70,7 +70,7 @@ export default function Contact() {
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
                   <svg
-                    className="w-6 h-6 text-base-content"
+                    className="w-6 h-6 text-primary"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -90,7 +90,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-base-content/70  mt-2">
+                  <p className="text-base-content/70  mt-3">
                     123 Dinosaur Street, London NSW 2000 AU
                   </p>
                 </div>

@@ -40,7 +40,7 @@ export default function About() {
               haven't felt anything like this since the time of Daniela.
             </p>
             <div className="pt-4 text-center lg:text-left">
-              <button className="btn btn-primary rounded-full px-6 py-3 text-base font-medium">
+              <button className="btn btn-primary rounded-full px-6 py-3 text-base font-medium w-full sm:w-auto">
                 <a
                   href="https://wa.me/447778628831?text=Lo%20pompi?"
                   target="_blank"
