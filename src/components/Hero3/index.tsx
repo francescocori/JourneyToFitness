@@ -97,7 +97,7 @@ export default function Hero3() {
         href="https://wa.me/447778628831?text=Lo%20pompi?"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed top-4 right-4 z-50 flex items-center gap-3  md:hidden"
+        className="fixed bottom-4 right-4 z-50 flex items-center gap-3  md:hidden"
       >
         <div className="rounded-full flex items-center justify-center">
           <Image
