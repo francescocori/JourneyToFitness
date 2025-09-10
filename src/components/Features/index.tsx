@@ -61,7 +61,8 @@ const featuresData: Feature[] = [
 
 export default function Features() {
   return (
-    <section className="py-8 sm:py-12 lg:py-20 bg-base bg-primary/10  flex flex-col mx-[20px] rounded-2xl">
+    // <section className="py-8 sm:py-12 lg:py-20 bg-base bg-primary/10  flex flex-col mx-[20px] rounded-2xl">
+    <section className="py-8 sm:py-12 lg:py-20 bg-base   flex flex-col mx-[20px] rounded-2xl">
       <div className="container mx-auto px-4 flex flex-col items-center">
         <h2 className="text-4xl lg:text-5xl leading-tight text-center lg:text-left text-primary mb-8 sm:mb-12 lg:mb-16">
           Never been easier

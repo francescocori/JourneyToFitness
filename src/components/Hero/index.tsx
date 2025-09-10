@@ -1,132 +1,185 @@
 "use client";
-
-import { motion } from "motion/react";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function Hero() {
-  return (
-    <section className="w-full min-h-screen flex items-center justify-center text-base-content relative">
-      {/* Background image with grayscale filter */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: "url(/Images/gymBg1.png)",
-          //backgroundImage: "url(/Images/gymBg2.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          filter: "grayscale(100%) contrast(1.1) brightness(0.8)",
-          zIndex: 1,
-        }}
-      ></div>
+  const imageRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-base-300/50 z-10"></div>
+  const textParts = [
+    // { text: "Welcome to your", color: "text-base-content" },
+    // { text: "Journey to Fitness", color: "text-base-content" },
+    { text: "Flexible workouts", color: "text-base-content" },
+    { text: "tailored to your routine", color: "text-base-content" },
+    // { text: "", color: "text-base-content" },
+  ];
+  // Flexible workouts and nutrition tailored to your routine
+  const fullText = textParts.map((part) => part.text).join("");
 
-      {/* Text content with highest z-index */}
-      <div className="text-center px-6 max-w-7xl mx-auto relative z-20">
-        <motion.h1
-          className="text-6xl md:text-[180px] font-black leading-[0.8] tracking-tight mb-4 md:mb-8 drop-shadow-2xl text-base-content"
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{
-            duration: 0.5,
-            ease: "linear",
-            delay: 0.1,
-          }}
-        >
-          <span className="flex flex-col">
-            <span className="text-primary text-2xl  tracking-widest">
-              WELCOME TO
+  // Function to render typed text with colors
+  const renderTypedText = () => {
+    let currentLength = 0;
+    const elements = [];
+
+    for (let i = 0; i < textParts.length; i++) {
+      const part = textParts[i];
+      const partLength = part.text.length;
+      const endLength = currentLength + partLength;
+
+      if (currentIndex >= currentLength) {
+        const visibleLength = Math.min(
+          currentIndex - currentLength,
+          partLength
+        );
+        if (visibleLength > 0) {
+          elements.push(
+            <span key={i} className={part.color}>
+              {part.text.substring(0, visibleLength)}
             </span>
-          </span>
-          JOURNEY
-        </motion.h1>
+          );
+        }
 
-        <motion.h1
-          className="text-6xl md:text-[180px] font-black leading-[0.8] tracking-tight mb-12 md:mb-16 drop-shadow-2xl text-base-content"
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{
-            duration: 0.5,
-            ease: "linear",
-            delay: 0.2,
-          }}
-        >
-          <span className="text-primary text-2xl  tracking-widest">TO</span>
-          FITNESS
-        </motion.h1>
+        // Add line break after each part (except the last one)
+        if (i < textParts.length - 1 && currentIndex >= endLength) {
+          elements.push(<br key={`br-${i}`} />);
+        }
+      }
 
-        <motion.p
-          className="text-lg md:text-2xl font-light tracking-[0.2em] text-base-content/70 uppercase drop-shadow-lg"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{
-            duration: 0.6,
-            ease: "easeOut",
-            delay: 0.5,
-          }}
-        >
-          {/* BUILDING <span className="font-semibold">BETTER</span> TONTOS LEGS{" "}
-          <span className="font-semibold">CARAPIX IS</span> BEST. */}
-          {/* <span className="text-red-500 text-2xl  tracking-widest">
-            FOR HIRE
-          </span> */}
-        </motion.p>
+      currentLength = endLength;
+    }
+
+    return elements;
+  };
+
+  // Typewriter effect
+  useEffect(() => {
+    if (currentIndex < fullText.length) {
+      const timeout = setTimeout(() => {
+        setCurrentIndex((prev) => prev + 1);
+      }, 80); // Slower typing speed
+
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, fullText]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (imageRef.current) {
+        const element = imageRef.current;
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Calculate scroll progress (0 to 1)
+        const scrollProgress = Math.max(
+          0,
+          Math.min(1, (windowHeight - rect.top) / windowHeight)
+        );
+
+        // Scale from 1.2 to 1.0 based on scroll progress
+        const scale = 1.2 - scrollProgress * 0.2;
+
+        // Apply transform
+        element.style.transform = `scale(${scale})`;
+        element.style.opacity = `${Math.max(0.3, scrollProgress)}`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial call
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div className="min-h-screen relative overflow-hidden bg-hero">
+      {/* Fixed WhatsApp Button - Mobile Only */}
+      <a
+        href="https://wa.me/447778628831?text=Lo%20pompi?"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-4 right-4 z-50 flex items-center gap-3  md:hidden"
+      >
+        <div className="rounded-full flex items-center justify-center">
+          <Image
+            src="/Images/whatsapp.png"
+            alt="WhatsApp"
+            width={50}
+            height={50}
+            className="w-[52px] h-[52px]"
+          />
+        </div>
+      </a>
+
+      {/* Hero Section */}
+      <div className="hero h-[70vh] flex items-center justify-center relative z-10 container mx-auto px-4">
+        <div className="hero-content text-center max-w-3xl">
+          <div className="space-y-6">
+            <h1 className="text-4xl lg:text-6xl  leading-tight">
+              {renderTypedText()}
+              <span className="inline-block w-0.5 h-12 bg-primary animate-pulse ml-1"></span>
+            </h1>
+
+            <p className="text-lg text-base-content/70 max-w-xl mx-auto leading-relaxed">
+              {/* Flexible workouts and nutrition guidance that fit seamlessly into
+              your daily routine. */}
+              Welcome to your
+              <span className="font-semibold"> Journey to Fitness </span>
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+              <button className="btn btn-primary rounded-full px-6 py-3 text-base font-medium w-full sm:w-auto">
+                <a
+                  href="https://wa.me/447778628831?text=Lo%20pompi?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  //className="font-founders mt-4 btn  border-brand-goldDark font-medium shadow-none"
+                >
+                  BOOK A FREE CALL
+                </a>
+              </button>
+            </div>
+
+            {/* Scroll Down Indicator */}
+            <div className="flex flex-col items-center pt-8">
+              <span className="text-sm text-base-content/60 mb-2">
+                Scroll down
+              </span>
+              <div className="animate-bounce">
+                <svg
+                  className="w-5 h-5 text-base-content/60"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Scroll down indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20"
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          duration: 0.8,
-          ease: "easeOut",
-          delay: 1.0,
-        }}
+      {/* Large Device Mockups Section */}
+      <div
+        className="lg:h-[70vh] h-[50vh] relative overflow-hidden"
+        style={{ perspective: "1000px" }}
       >
-        {/* Mouse icon */}
-        <div className="mb-2">
-          <svg
-            width="24"
-            height="36"
-            viewBox="0 0 24 36"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-base-content"
-          >
-            <rect
-              x="1"
-              y="1"
-              width="22"
-              height="34"
-              rx="11"
-              stroke="currentColor"
-              strokeWidth="2"
-              fill="none"
-            />
-            <motion.rect
-              x="10"
-              y="8"
-              width="4"
-              height="8"
-              rx="2"
-              fill="currentColor"
-              animate={{ y: [8, 12, 8] }}
-              // transition={{
-              //   duration: 1.5,
-              //   repeat: Infinity,
-              //   ease: "easeInOut",
-              // }}
-            />
-          </svg>
+        <div className="absolute inset-0 flex items-center justify-center mx-[20px]">
+          <Image
+            ref={imageRef as React.RefObject<HTMLImageElement>}
+            src="/Images/gymBg1.png"
+            alt="Gym interior"
+            width={800}
+            height={600}
+            className="w-full h-[80%] object-cover transition-all duration-300 ease-out rounded-2xl"
+          />
         </div>
-
-        {/* Scroll down text */}
-        <span className="text-base-content text-sm font-medium tracking-wide uppercase">
-          Scroll down
-        </span>
-      </motion.div>
-    </section>
+      </div>
+    </div>
   );
 }

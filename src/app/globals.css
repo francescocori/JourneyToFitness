@@ -30,7 +30,7 @@ body {
   --btn-border: #5a873a !important;
 }
 
-.bg-shopify-hero {
+.bg-hero {
   background-color: #f1fff9;
   background-image: linear-gradient(#f1fff900 70%, #f1fff9),
     radial-gradient(circle at 0 0, #5fd5b6 0, #5fd5b600 30%),

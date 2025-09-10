@@ -1,6 +1,5 @@
 import {
-  Hero3,
-  Hero2,
+  Hero,
   SplitScreen,
   About,
   About2,
@@ -13,12 +12,18 @@ import {
 export default function Home() {
   return (
     <div>
-      <Hero3 />
+      {/* <Hero />
       <About />
-      {/* <Hero2 /> */}
       <Features />
       <SplitScreen />
-      {/* <About /> */}
+      <About />
+      <Faq />
+      <Contact />
+      <Footer /> */}
+      <Hero />
+      <Features />
+      <About />
+      <SplitScreen />
       <Faq />
       <Contact />
       <Footer />
