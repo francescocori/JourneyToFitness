@@ -40,21 +40,21 @@ const featuresData: Feature[] = [
     id: "1",
     title: "Free Consultation",
     description:
-      "Get personalized attention with one-on-one training sessions tailored to your specific fitness goals and needs.",
+      "Book a free call to discuss your goals, lifestyle, and fitness needs before starting.",
     icon: "💬",
   },
   {
     id: "2",
     title: "We make the plan",
     description:
-      "Train from anywhere with our online personal training sessions. Get the same quality guidance through video calls.",
+      "Get a personalized training and nutrition plan designed to fit your schedule and objectives.",
     icon: "📝",
   },
   {
     id: "3",
     title: "Let's workout",
     description:
-      "Join our high-energy group bootcamp sessions for motivation, camaraderie, and intense full-body workouts.",
+      "It’s time to do the work. I’ll guide you every step of the way to reach your dream shape.",
     icon: "💪",
   },
 ];
@@ -65,7 +65,7 @@ export default function Features() {
     <section className="py-8 sm:py-12 lg:py-20 bg-base   flex flex-col mx-[20px] rounded-2xl">
       <div className="container mx-auto px-4 flex flex-col items-center">
         <h2 className="text-4xl lg:text-5xl leading-tight text-center lg:text-left text-primary mb-8 sm:mb-12 lg:mb-16">
-          Never been easier
+          Start Your Journey
         </h2>
       </div>
 

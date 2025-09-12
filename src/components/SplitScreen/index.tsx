@@ -9,7 +9,7 @@ interface Slide {
   subtitle?: string;
   description: string;
   description2: string;
-  description3: string;
+  description3?: string;
   image: string;
 }
 
@@ -18,12 +18,9 @@ const slides: Slide[] = [
     id: 1,
     title: "Private Lessons",
     subtitle: "BUILD POWER",
-    description:
-      "Transform your body with our comprehensive strength training programs designed to build lean muscle and increase your power.",
+    description: "Experience one-on-one training tailored to your goals.",
     description2:
-      "Transform your body with our comprehensive strength training programs designed to build lean muscle and increase your power.",
-    description3:
-      "training programs designed to build lean muscle and increase your power.",
+      "Every session is customized to push your limits, improve technique, and ensure steady progress while keeping you motivated and confident in your journey toward your dream body.",
     image: "/Images/training.jpg",
   },
   {
@@ -31,11 +28,9 @@ const slides: Slide[] = [
     title: "Online Lessons",
     subtitle: "PUSH LIMITS",
     description:
-      "Push your cardiovascular limits with high-intensity training that .",
+      "Train from anywhere with live, interactive sessions designed to fit your schedule.",
     description2:
-      "Push your cardiovascular limits with high-intensity training that builds stamina and mental toughness.Push your cardiovascular",
-    description3:
-      "Push your cardiovascular limits with high-intensity training that.",
+      "Receive expert guidance, real-time feedback, and structured workouts that keep you accountable, energized, and consistently progressing toward your fitness goals.",
     image: "/Images/online2.webp",
   },
   {
@@ -43,11 +38,9 @@ const slides: Slide[] = [
     title: "Saturday Bootcamp",
     subtitle: "FIND HARMONY",
     description:
-      "Develop core stability and body awareness through functional movements and mindful training techniques.Develop core stability.",
+      "Join our high-energy outdoor sessions to challenge your body and mind.",
     description2:
-      "Develop core stability and body awareness through functional movements and mindful training techniques.Develop core stabilit",
-    description3:
-      "Develop core stability and body awareness through functional movements and mindful training techniques.Develop core stabilit.",
+      "Build strength, endurance, and agility in a fun, motivating group environment while enjoying fresh air and camaraderie, making fitness social, dynamic, and exciting every weekend.",
     image: "/Images/bootcamp.jpg",
   },
   {
@@ -55,11 +48,9 @@ const slides: Slide[] = [
     title: "Nutritional Plans",
     subtitle: "MASTER TRAINER",
     description:
-      "Meet our lead trainer who will guide your fitness journey with personalized programs and expert guidance.Meet our lead trainer.",
+      "Receive personalized meal guidance and practical nutrition tips to fuel your workouts, enhance recovery, and optimize performance.",
     description2:
-      "Meet our lead trainer who will guide your fitness journey with personalized programs and expert guidance.Meet our lead trainer.",
-    description3:
-      "Meet our lead trainer who will guide your fitness journey with personalized programs and expert guidance.Meet our lead trainer.",
+      "Learn how to eat for your goals, maintain energy, and make sustainable changes that complement your fitness journey effectively.",
     image: "/Images/diet.jpg",
   },
 ];
