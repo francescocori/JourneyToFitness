@@ -9,7 +9,7 @@ export default function About() {
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-10 items-center">
           <div className="relative col-span-1 lg:col-span-3">
             <div className="relative overflow-hidden ">
-              <img src="/Images/carlo4.png" alt="carlo" className="mx-auto " />
+              <img src="/Images/carlo3.png" alt="carlo" className="mx-auto " />
 
               {/* Subtle overlay for consistency */}
               <div className="absolute inset-0 bg-base-300/10" />

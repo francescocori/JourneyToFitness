@@ -12,21 +12,20 @@ import {
 export default function Home() {
   return (
     <div>
-      {/* <Hero />
-      <About />
-      <Features />
-      <SplitScreen />
-      <About />
-      <Faq />
-      <Contact />
-      <Footer /> */}
       <Hero />
-      <Features />
       <About />
+      <Features />
       <SplitScreen />
       <Faq />
       <Contact />
       <Footer />
+      {/* <Hero />
+      <Features />
+      <About />
+      <SplitScreen />
+      <Faq />
+      <Contact />
+      <Footer /> */}
     </div>
   );
 }
