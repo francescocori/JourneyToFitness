@@ -126,7 +126,7 @@ export default function Hero() {
               <span className="font-semibold"> Journey to Fitness </span>
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center min-w-[82vw]">
               <button className="btn btn-primary rounded-full px-6 py-3 text-base font-medium w-full sm:w-auto">
                 <a
                   href="https://wa.me/447778628831?text=Lo%20pompi?"
