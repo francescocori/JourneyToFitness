@@ -21,7 +21,7 @@ const slides: Slide[] = [
     description: "Experience one-on-one training tailored to your goals.",
     description2:
       "Every session is customized to push your limits, improve technique, and ensure steady progress while keeping you motivated and confident in your journey toward your dream body.",
-    image: "/Images/training.jpg",
+    image: "/Images/training.webp",
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const slides: Slide[] = [
       "Join our high-energy outdoor sessions to challenge your body and mind.",
     description2:
       "Build strength, endurance, and agility in a fun, motivating group environment while enjoying fresh air and camaraderie, making fitness social, dynamic, and exciting every weekend.",
-    image: "/Images/bootcamp.jpg",
+    image: "/Images/bootcamp.webp",
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const slides: Slide[] = [
       "Receive personalized meal guidance and practical nutrition tips to fuel your workouts, enhance recovery, and optimize performance.",
     description2:
       "Learn how to eat for your goals, maintain energy, and make sustainable changes that complement your fitness journey effectively.",
-    image: "/Images/diet.jpg",
+    image: "/Images/diet.webp",
   },
 ];
 
